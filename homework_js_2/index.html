@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    // - Створити масив, наповнити його 10 елементами будь-якого типу, вивести кожен елемент в консоль
+    let mass = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]
+    console.log(mass[0], mass[1], mass[2], mass[3], mass[4], mass[5], mass[6], mass[7], mass[8], mass[9]);
+    //- Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre.
+    //- Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre, authors. Поле "автори" - масив. Кожен автор має поля name,age
+
+    let book1 = {
+        title: 'The Witcher : The Last Wish',
+        pageCount: 292,
+        genre: ' Fantasy',
+        authors: [{name: 'Andrzej Sapkowski', age: 74}]
+    };
+    let book2 = {
+        title: 'The Witcher : Sword of Destiny: ',
+        pageCount: 385,
+        genre: ' Fantasy',
+        authors: [{name: 'Andrzej Sapkowski', age: 74}]
+
+    };
+    let book3 = {
+        title: 'The Witcher : Blood of Elves',
+        pageCount: 324,
+        genre: ' Fantasy',
+        authors: [{name: 'Andrzej Sapkowski', age: 74}]
+
+    };
+    console.log(book1, book2, book3);
+    //- Створити масив з 10 об'єктами які описують сутніть "користувач". Поля: name, username,password. Вивести в консоль пароль кожного користувача
+    let users = [
+        {name: 'Igor', username: 'Nevermore', password: 1111234},
+        {name: 'Ivan', username: 'Nevermore', password: 2223333},
+        {name: 'Oleh', username: 'Nevermore', password: 333343433},
+        {name: 'Petro', username: 'Nevermore', password: 444456466465},
+        {name: 'Bohdan', username: 'Nevermore', password: 55543343},
+        {name: 'Nastia', username: 'Nevermore', password: 66623432432},
+        {name: 'Arsen', username: 'Nevermore', password: 777},
+        {name: 'Vitalik', username: 'Nevermore', password: 888845454},
+        {name: 'Roma', username: 'Nevermore', password: 9943343},
+        {name: 'Oksana', username: 'Nevermore', password: 1023212112}
+    ];
+    console.log((users[0].password), (users[1].password), (users[2].password), (users[3].password), (users[4].password)
+        , (users[5].password), (users[6].password), (users[7].password), (users[8].password), (users[9].password));
+</script>
+
+</body>
+</html>
