@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //Всі функції повинні бути описані стрілочним типом!!!!
+    //- створити функцію яка приймає три числа та виводить найменьше. (Без Math.min!)
+    //- створити функцію яка приймає три числа та виводить найбільше. (Без Math.max!)
+    let minimum = (a, b, c) => {
+        if (a < b && a < c) {
+            console.log(a);
+        } else if (b < a && b < c) {
+            console.log(b);
+        } else if (c < b && c < a) {
+            console.log(c);
+        } else {
+            console.log('error')
+        }
+    }
+    minimum(4, 2, 5);
+
+    let maximum = (a, b, c) => {
+        if (a > b && a > c) {
+            console.log(a);
+        } else if (b > a && b > c) {
+            console.log(b);
+        } else if (c > b && c > a) {
+            console.log(c);
+        } else {
+            console.log('error')
+        }
+    }
+    maximum(4, 2, 5);
+    //- створити функцію яка повертає найбільше число з масиву
+    //- створити функцію яка повертає найменьше число з масиву
+    let one = [4, 3, 10, 20, 1]
+    let arrmax = (array) => {
+        let max = array[0];
+        for (let i = 0; i < array.length; i++) {
+            if (max < array[i]) {
+                max = array[i]
+            }
+
+        }
+        console.log(max);
+    }
+    arrmax(one);
+
+
+    let arrmin = (array) => {
+        let min = array[0];
+        for (let i = 0; i < array.length; i++) {
+            if (min > array[i]) {
+                min = array[i]
+            }
+
+        }
+        console.log(min);
+    }
+    arrmin(one);
+    //- створити функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад [1,2,10]->13
+    let arrsum = (array) => {
+        let sum = 0;
+        for (let i = 0; i < array.length; i++) {
+            sum = sum + array[i]
+        }
+
+        console.log(sum);
+    }
+    arrsum(one);
+    //- Дано натуральное число n. Выведите все числа от 1 до n.
+    let limit_n = (n) => {
+        let array = [];
+        for (let i = 0; i < n; i++) {
+            if (i > 0) {
+                array.push([i]);
+            }
+
+
+        }
+        document.write(`<p>${array}</p>`);
+    }
+    limit_n(20);
+
+
+    //- Даны два целых числа A и В . Выведите все числа от A до B включительно, в порядке возрастания, если A < B, или в порядке убывания в противном случае.
+    let limit_ab = (a, b) => {
+        let array = [];
+        if (a < b) {
+            for (let i = a; i <= b; i++) {
+                array.push([i]);
+
+            }
+            document.write(`<p>${array}</p>`);
+        } else if (a > b) {
+            for (let i = a; i >= b; i--) {
+                array.push([i]);
+            }
+            document.write(`<p>${array}</p>`);
+        }
+    }
+    limit_ab(4, 20);
+    limit_ab(20, 4);
+
+
+    /*
+       -   функція Приймає масив та число "i", та міняє місцями об`єкт який знаходиться в індексі "i" на "i+1"
+      EXAMPLE:
+      foo([9,8,0,4], 0) // ==> [ 8, 9, 0, 4 ]
+      foo([9,8,0,4], 1) // ==> [ 9 ,0, 8, 4 ]
+      foo([9,8,0,4], 2) // ==> [ 9, 8, 4, 0 ]
+
+     */
+    let mass = [1, 2, 3, 4]
+    let swap = (array, n) => {
+        a = n + 1
+        let arr = array[n];
+        array[n] = array[a];
+        array[a] = arr;
+
+
+        document.write(`<p>${array}</p>`);
+    }
+    swap(mass, 1)
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    // - створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б
+    // - створити функцію яка обчислює та повертає площу кола з радіусом r
+    // - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
+    function square1(a, b) {
+        let s = a * b;
+        console.log(s)
+    }
+
+    square1(4, 5);
+
+    //--------
+    function square2(r) {
+        let s = 3.14 * Math.pow(r, 2);
+        console.log(s)
+    }
+
+    square2(10);
+
+
+    function square3(h, r) {
+        let s = 2 * 3.14 * r * (h + r);
+        console.log(s);
+    }
+
+    square3(5, 5);
+    //- створити функцію яка приймає масив та виводить кожен його елемент
+    //- створити функцію яка створює параграф з текстом. Текст задати через аргумент
+    let mass = [1, 2, 3, 4, 5];
+
+    function m(array) {
+        for (let arrayElement of array) {
+            console.log(arrayElement);
+        }
+    }
+
+    m(mass);
+    let b = 'Hello Okten';
+
+    //--------
+
+    function p(text) {
+        document.write(`<p>${text}</p>`);
+    }
+
+    p(b);
+    p('Ivan');
+
+    //- створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
+    function ul(text) {
+        document.write(`<ul>
+         <li>${text}</li>
+         <li>${text}</li>
+         <li>${text}</li>
+</ul>`);
+    }
+
+    ul('Hello');
+
+    //- створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
+    function ul1(text, n) {
+        document.write(`<ul>`);
+        for (let i = 0; i < n; i++) {
+            document.write(`<li> ${text} </li>`);
+        }
+        document.write(`</ul>`);
+    }
+
+    ul1('Hello', 3);
+    //- створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
+    let mass2 = [10, 20, 30, 40, 50];
+
+    function list(array) {
+        document.write(`<ol>`);
+        for (let arrayElement of array) {
+            document.write(`<li>${arrayElement}</li>`);
+        }
+        document.write(`</ol>`);
+    }
+    list(mass2);
+    //- створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
+  let users = [
+      {id: 10, name: 'Vasya', age:30},
+      {id: 11, name: 'Petya', age:25},
+      {id: 12, name: 'ivan', age:18}
+  ];
+  function list_obj (array){
+      document.write(`<ul>`);
+      for (let arrayElement of array) {
+      document.write(`<li>id - ${arrayElement.id} &nbsp name - ${arrayElement.name} &nbsp age - ${arrayElement.age} </li>`)
+      }
+      document.write(`</ul>`);
+
+  }
+  list_obj(users);
+  //- створити функцію яка повертає найменьше число з масиву
+ let mass3 = [100,1,200,300,4,-2,-10,0]
+ function min_number (array) {
+     let minimum = array[0];
+     for (let i = 0; i < array.length; i++) {
+         if (minimum > array[i]) minimum = array[i]
+
+     }
+     console.log(minimum);
+
+ }
+ min_number(mass3);
+ //- створити функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад [1,2,10]->13
+    let mass4 = [10,20,30,40]
+    function sum_mass (array) {
+       let sum = 0;
+        for (let i = 0; i < array.length; i++) {
+        sum = sum + array[i];
+        }
+        console.log(sum)
+    }
+    sum_mass(mass4);
+
+</script>
+</body>
+</html>
