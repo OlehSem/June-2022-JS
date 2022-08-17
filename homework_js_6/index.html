@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    /*
+1 - Знайти та вивести довижину настипних стрінгових значень
+    'hello world', 'lorem ipsum', 'javascript is cool'
+
+//1/*
+    let a = 'hello world';
+    let b= 'lorem ipsum';
+    let c= 'javascript is cool';
+    console.log(a.length,b.length,c.length);
+
+  // - Перевести до великого регістру наступні стрінгові значення
+  //    'hello world', 'lorem ipsum', 'javascript is cool'
+    console.log(a.toUpperCase(),b.toUpperCase(),c.toUpperCase());
+
+
+   // - Перевести до нижнього регістру настипні стрінгові значення
+   //   'HELLO WORLD', 'LOREM IPSUM', 'JAVASCRIPT IS COOL'
+
+    console.log(a.toLocaleLowerCase(),b.toLowerCase(),c.toLowerCase());
+
+
+    //- Є "брудна" стрінга let str = ' dirty string   ' . Почистити її від зайвих пробілів.
+    let str = ' dirty string   ';
+    console.log(str.trim());
+
+     */
+    /*
+    - Напишіть функцію stringToarray(str), яка перетворює рядок на масив слів.
+    let str = 'Ревуть воли як ясла повні';
+    let arr = stringToarray(str); ['Ревуть', 'воли', 'як', 'ясла', 'повні']
+     */
+    let string = 'Ревуть воли як ясла повні';
+    console.log(string.split(/ /));
+    /*
+    - є масив чисел [10,8,-7,55,987,-1011,0,1050,0] . за допомоги map та колбеку перетворити всі об'єкти в масиві на стрінгові.
+    - створити функцію sortNums(direction), яка прймає масив чисел, та сортує його від більшого до меньшого, або навпаки в залежності від значення аргументу direction.
+    let nums = [11,21,3];
+    sortNums(nums,'ascending') // [3,11,21]
+    sortNums(nums,'descending') // [21,11,3]
+     */
+    let array = [10, 8, -7, 55, 987, -1011, 0, 1050, 0];
+    let map = array.map(array => array + '');
+    console.log(map);
+
+
+    let nums = [11, 21, 3];
+    let sortNums = (direction) => {
+        if (direction === '-') {
+            c = nums.sort((a, b,) => a - b);
+            return c;
+        } else if (direction === '+') {
+            f = nums.sort((a, b,) => b - a)
+            return f;
+        }
+
+    }
+    console.log(sortNums('-'));
+    console.log(sortNums('+'));
+    /*
+     є масив
+    let coursesAndDurationArray = [
+        {title: 'JavaScript Complex', monthDuration: 5},
+        {title: 'Java Complex', monthDuration: 6},
+        {title: 'Python Complex', monthDuration: 6},
+        {title: 'QA Complex', monthDuration: 4},
+        {title: 'FullStack', monthDuration: 7},
+        {title: 'Frontend', monthDuration: 4}
+    ];
+     -- відсортувати його за спаданням за monthDuration
+     -- відфільтрувати , залишивши тільки курси з тривалістю більше 5 місяців
+     */
+    let coursesAndDurationArray = [
+        {title: 'JavaScript Complex', monthDuration: 5},
+        {title: 'Java Complex', monthDuration: 6},
+        {title: 'Python Complex', monthDuration: 6},
+        {title: 'QA Complex', monthDuration: 4},
+        {title: 'FullStack', monthDuration: 7},
+        {title: 'Frontend', monthDuration: 4}
+    ];
+    let monthDuration = coursesAndDurationArray.sort((a, b) => b.monthDuration - a.monthDuration)
+    console.log(monthDuration);
+    let filter = coursesAndDurationArray.filter(months => months.monthDuration > 5);
+    console.log(filter);
+
+    let cards = [
+        {cardSuit: 'clubs', value: 'Ace', color: 'black'},
+        {cardSuit: 'clubs', value: 2, color: 'black'},
+        {cardSuit: 'clubs', value: 3, color: 'black'},
+        {cardSuit: 'clubs', value: 4, color: 'black'},
+        {cardSuit: 'clubs', value: 5, color: 'black'},
+        {cardSuit: 'clubs', value: 6, color: 'black'},
+        {cardSuit: 'clubs', value: 7, color: 'black'},
+        {cardSuit: 'clubs', value: 8, color: 'black'},
+        {cardSuit: 'clubs', value: 9, color: 'black'},
+        {cardSuit: 'clubs', value: 10, color: 'black'},
+        {cardSuit: 'clubs', value: 'Jack', color: 'black'},
+        {cardSuit: 'clubs', value: 'Queen', color: 'black'},
+        {cardSuit: 'clubs', value: 'King', color: 'black'},
+
+        {cardSuit: 'diamonds', value: 'Ace', color: 'red'},
+        {cardSuit: 'diamonds', value: 2, color: 'red'},
+        {cardSuit: 'diamonds', value: 3, color: 'red'},
+        {cardSuit: 'diamonds', value: 4, color: 'red'},
+        {cardSuit: 'diamonds', value: 5, color: 'red'},
+        {cardSuit: 'diamonds', value: 6, color: 'red'},
+        {cardSuit: 'diamonds', value: 7, color: 'red'},
+        {cardSuit: 'diamonds', value: 8, color: 'red'},
+        {cardSuit: 'diamonds', value: 9, color: 'red'},
+        {cardSuit: 'diamonds', value: 10, color: 'red'},
+        {cardSuit: 'diamonds', value: 'Jack', color: 'red'},
+        {cardSuit: 'diamonds', value: 'Queen', color: 'red'},
+        {cardSuit: 'diamonds', value: 'King', color: 'red'},
+
+        {cardSuit: 'hearts', value: 'Ace', color: 'red'},
+        {cardSuit: 'hearts', value: 2, color: 'red'},
+        {cardSuit: 'hearts', value: 3, color: 'red'},
+        {cardSuit: 'hearts', value: 4, color: 'red'},
+        {cardSuit: 'hearts', value: 5, color: 'red'},
+        {cardSuit: 'hearts', value: 6, color: 'red'},
+        {cardSuit: 'hearts', value: 7, color: 'red'},
+        {cardSuit: 'hearts', value: 8, color: 'red'},
+        {cardSuit: 'hearts', value: 9, color: 'red'},
+        {cardSuit: 'hearts', value: 10, color: 'red'},
+        {cardSuit: 'hearts', value: 'Jack', color: 'red'},
+        {cardSuit: 'hearts', value: 'Queen', color: 'red'},
+        {cardSuit: 'hearts', value: 'King', color: 'red'},
+        {value: 'Joker', color: 'red'},
+
+        {cardSuit: 'spades', value: 'Ace', color: 'black'},
+        {cardSuit: 'spades', value: 2, color: 'black'},
+        {cardSuit: 'spades', value: 3, color: 'black'},
+        {cardSuit: 'spades', value: 4, color: 'black'},
+        {cardSuit: 'spades', value: 5, color: 'black'},
+        {cardSuit: 'spades', value: 6, color: 'black'},
+        {cardSuit: 'spades', value: 7, color: 'black'},
+        {cardSuit: 'spades', value: 8, color: 'black'},
+        {cardSuit: 'spades', value: 9, color: 'black'},
+        {cardSuit: 'spades', value: 10, color: 'black'},
+        {cardSuit: 'spades', value: 'Jack', color: 'black'},
+        {cardSuit: 'spades', value: 'Queen', color: 'black'},
+        {cardSuit: 'spades', value: 'King', color: 'black'},
+        {value: 'Joker', color: 'black'},
+
+    ];
+    let filterace = cards.filter(filter => filter.value === 'Ace' && filter.cardSuit === 'spades');
+    console.log(filterace);
+    let allsix = cards.filter(filtersix => filtersix.value === 6);
+    console.log(allsix);
+    let allredcard = cards.filter(allred => allred.color === 'red');
+    console.log(allredcard);
+    let alldiamonds = cards.filter(alldiamonds => alldiamonds.cardSuit === 'diamonds');
+    console.log(alldiamonds);
+    let allspadesfrom9 = cards.filter(fromnine => fromnine.value > '8' && fromnine.cardSuit === 'spades');
+    console.log(allspadesfrom9);
+
+
+    let coloda = cards.reduce(function (filtrator, card) {
+        if (card.cardSuit === 'spades') {
+            filtrator.cardSpades.push(card);
+
+        } else if (card.cardSuit === 'diamonds') {
+            filtrator.cardDiamonds.push(card);
+
+        } else if (card.cardSuit === 'hearts') {
+            filtrator.cardHearts.push(card);
+
+        } else if (card.cardSuit === 'clubs') {
+            filtrator.cardClubs.push(card);
+        }
+        return filtrator;
+    }, {cardDiamonds: [], cardSpades: [], cardHearts: [], cardClubs: []})
+    console.log(coloda);
+
+    /*
+    Додатково по reduce
+Взяти описану колоду карт, та за допомоги редюсу попакувати всі карти по "мастях" в об'єкт
+{
+    spades:[],
+    diamonds:[],
+    hearts:[],
+    clubs:[]
+}
+
+ описати колоду карт
+ - знайти піковий туз
+ - всі шістки
+ - всі червоні карти
+ - всі буби
+ - всі трефи від 9 та більше
+
+     */
+</script>
+</body>
+</html>

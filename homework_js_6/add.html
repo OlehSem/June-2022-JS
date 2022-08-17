@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //- Напишите функцию - Напишите функцию cutString(str, n), которая делит строку на подстроки, состоящие из n символов.
+    //document.writeln(cutString('наслаждение',3)) // [нас,лаж,ден,ие], которая делит строку на подстроки, состоящие из n символов.
+    //document.writeln(cutString('наслаждение',3)) // [нас,лаж,ден,ие]
+    let cutString = (str, n) => {
+        let newarr = [];
+        for (let i = 0; i < str.length; i += n) {
+            let sub = str.substring(i, i + n);
+            newarr.push(sub);
+        }
+        console.log(newarr);
+    }
+    (cutString('наслаждение', 3));
+    //- Напишіть функцію delete_characters(str, length), яка повертає підрядок, що складається із зазначеної кількості символів.
+    //   let str = 'Каждый охотник желает знать';
+    //document.writeln(delete_characters(str, 7)); // Каждый
+    let str = 'Каждый охотник желает знать';
+    let delete_characters = (str, length) => {
+        return str.substring(0, length);
+    }
+    console.log(delete_characters(str, 7));
+    //- Напишіть функцію insert_dash(str), яка приймає рядок str як аргумент і вставляє тире (-) між словами. При цьому всі символи рядка необхідно перевести у верхній регістр.
+    let string = "HTML JavaScript PHP";
+    let insert_dash = (str) => {
+        return str.replaceAll(' ', '-').toUpperCase();
+
+    }
+    console.log(insert_dash(string));
+    document.writeln(insert_dash(string));
+    //    document.writeln(insert_dash(str)); // 'HTML-JAVASCRIPT-PHP'
+    //- Напишіть функцію, яка приймає рядок як аргумент і перетворює регістр першого символу рядка з нижнього регістру у верхній.
+    let stringa = 'hello';
+    let first = (str) => {
+        a = str.replace(str[0], str[0].toUpperCase());
+        return a;
+
+    }
+    console.log(first(stringa));
+    console.log(first('asdasdas'));
+
+    //- Дано список імен.
+    let n1 = 'Harry..Potter'
+    let n2 = 'Ron---Whisley'
+    let n3 = 'Hermione__Granger'
+    //Написати функцію, яка приймає будь яке не валідне імя, та нормалізує його в наступнйи вигляд
+    //let n1 = 'Harry Potter'
+    //let n2 = 'Ron Whisley'
+    //let n3 = 'Hermione Granger'
+
+    let valid = (str) => {
+        return str.replaceAll('.', ' ')
+            .replaceAll('-', ' ')
+            .replaceAll('_', ' ')
+            .replaceAll(' ','')
+
+
+
+
+// Якщо ми бачимо пробіл розриваєм строку на дві частини,  потім видаляєм початок пробілів і з'єднюєм знову
+    }
+    console.log(valid(n1));
+    console.log(valid(n2));
+
+</script>
+</body>
+</html>
