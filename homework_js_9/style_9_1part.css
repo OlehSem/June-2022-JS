@@ -1,0 +1,17 @@
+.title,.time{
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.product-box > img {
+    max-width: 150px;
+}
+.time{
+    display: flex;
+    column-gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.courses {
+    font-size: 30px;
+}

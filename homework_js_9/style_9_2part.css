@@ -1,0 +1,14 @@
+.description{
+    font-size: 25px;
+}
+table {
+    font-family: sans-serif
+}
+td {
+    background-color:#eee;
+    padding: .25em .5em;
+    text-align: left;
+}
+
+
+
